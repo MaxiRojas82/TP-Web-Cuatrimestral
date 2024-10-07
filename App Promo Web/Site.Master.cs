@@ -12,7 +12,7 @@ namespace App_Promo_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!(Page is _Default))
+            if(!(Page is _Default || Page is CanjeadoExitoso))
             {
                 if (!(Seguridad.SessionVoucherActivo(Session["IdVoucher"])))
                 {

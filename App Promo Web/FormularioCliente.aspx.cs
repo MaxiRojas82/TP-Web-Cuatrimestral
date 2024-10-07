@@ -82,17 +82,17 @@ namespace App_Promo_Web
                     voucherNegocio.canjearVoucher(Session["IdVoucher"].ToString(), cliente.IdCliente, int.Parse(Request.QueryString["IdArticulo"]));
                 }
 
-                Response.Redirect("CanjeadoExitoso.aspx");
+                Response.Redirect("CanjeadoExitoso.aspx", false);
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
             {
                 Session.Clear();
             }
+         
 
         }
 
